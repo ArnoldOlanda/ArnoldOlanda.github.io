@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>App de tareas</h1>
+      <h3>Lista de tareas</h3>
+      <div class="todo-container"></div>
+      <span class="mensajes">Mensajes</span>
+      <button type="button" class="btn-add-new-todo" id="btnNewTodo">
+        <i class="fas fa-plus"></i> Agregar tarea
+      </button>
+    </div>
+    <div class="modal-background">
+      <div class="modal-container">
+        <div class="modal-title"><h2>Nueva Tarea</h2></div>
+        <div class="modal-body">
+          <input type="hidden" id="inputId" value="0" />
+          <div class="input">
+            <span>Titulo<input type="text" id="inputTitulo" /></span>
+          </div>
+          <div class="input">
+            <span
+              >Descripcion
+              <textarea id="inputDescripcion" cols="30" rows="4"></textarea>
+            </span>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" id="btnCloseModal">Cancelar</button>
+          <button type="button" id="btnSendData">Agregar</button>
+        </div>
+      </div>
+    </div>
+    <script src="js/ui.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

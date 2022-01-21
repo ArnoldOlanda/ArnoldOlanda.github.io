@@ -1,0 +1,194 @@
+$background-color: #171717;
+$secondary-color: #353535;
+$active-color:#272727;
+$font-color: #ffffff;
+$btn-background-hover: rgb(255, 255, 255);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+@mixin btn {
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  border-radius: 5px;
+}
+
+.container {
+  background-color: $background-color;
+  color: $font-color;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  .todo-container {
+    width: 45%;
+    height: 85vh;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    .todo {
+      width: 100%;
+      min-height: 100px;
+      background-color: $secondary-color;
+      padding: 10px;
+      border-radius: 10px;
+      transition: .5s ease;
+      opacity: 0;
+      h4 {
+        height: 20%;
+      }
+      p {
+        padding-top: 10px;
+        height: 40%;
+      }
+      .todo-actions-container {
+        height: 40%;
+        display: flex;
+        justify-content: flex-end;
+        gap: 5px;
+        button {
+          @include btn();
+          transition: 0.3s ease;
+          &:hover {
+            background-color: $btn-background-hover;
+          }
+        }
+      }
+    }
+    .animate-show-todo{
+        z-index: 50;
+        opacity: 1;
+    }
+  }
+  .btn-add-new-todo {
+    width: 8rem;
+    height: 2rem;
+    border: none;
+    border-radius: 10px;
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:5px;
+    transition: 0.5s ease;
+    background-color: red;
+    color:$font-color;
+    &:hover {
+      background-color: $btn-background-hover;
+    }
+    &:active{
+      background-color: $active-color;
+    }
+  }
+  .mensajes {
+    width: 30%;
+    padding: 5px;
+    height: 3rem;
+    background-color: rgb(255, 25, 25);
+    color: $font-color;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 20px;
+    opacity: 0;
+    z-index: 1;
+    transition: 0.5s ease;
+  }
+  .show-message {
+    z-index: 120;
+    opacity: 1;
+  }
+}
+
+.modal-background {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(124, 124, 124, 0.459);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s ease;
+  opacity: 0;
+  z-index: -1;
+  .modal-container {
+    background-color: $background-color;
+    width: 30%;
+    height: 40%;
+    color: $font-color;
+    border-radius: 10px;
+    transform: scale(0.5);
+    transition: 0.5s ease;
+    .modal-title {
+      display: flex;
+      justify-content: center;
+      height: 10%;
+    }
+    .modal-body {
+      height: 70%;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .input {
+        width: 100%;
+        height: 50%;
+        input {
+          padding: 5px 10px;
+          border: none;
+          border-radius: 10px;
+          height: 40%;
+          width: 100%;
+          outline: none;
+        }
+        textarea {
+          padding: 5px 10px;
+          width: 100%;
+          border: none;
+          resize: none;
+          outline: none;
+        }
+      }
+    }
+    .modal-footer {
+      padding: 10px;
+      height: 20%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 10px;
+
+      button {
+        @include btn();
+        width: 5rem;
+        transition: 0.5s ease;
+        &:hover {
+          background-color: $btn-background-hover;
+        }
+      }
+    }
+  }
+  .show-modal {
+    transform: scale(1);
+  }
+}
+.show-modal-background {
+  opacity: 1;
+  z-index: 100;
+}
+
+// sass scss/styles.scss css/styles.css --watch
