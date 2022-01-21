@@ -46,7 +46,7 @@ function crearTodo(todo) {
     inputDescripcion.value = todo.descripcion;
   });
   btnCheck.addEventListener("click", () => {
-    checkTodo(`http://localhost:8000/api/todos/${todo.id}`, dataTodo);
+    checkTodo(`https://todo-app-rest-api-node.herokuapp.com/api/todos/${todo.id}`, dataTodo);
   });
 
   return divTodo;
