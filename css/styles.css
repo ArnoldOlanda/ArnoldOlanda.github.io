@@ -55,10 +55,6 @@
 .container .todo-container .todo .todo-actions-container button:hover {
   background-color: white;
 }
-.container .todo-container .animate-show-todo {
-  z-index: 50;
-  opacity: 1;
-}
 .container .btn-add-new-todo {
   width: 8rem;
   height: 2rem;
@@ -183,6 +179,60 @@
 .show-modal-background {
   opacity: 1;
   z-index: 100;
+}
+
+@media (max-width: 390px) {
+  .container .todo-container {
+    width: 90%;
+    height: 78vh;
+  }
+  .container .todo-container .todo {
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+  .container .todo-container .todo p {
+    font-size: 16px;
+  }
+  .container .todo-container .todo .todo-actions-container {
+    height: 30%;
+  }
+  .container .todo-container .todo .todo-actions-container button {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .container .btn-add-new-todo {
+    width: 7rem;
+    height: 2rem;
+    border: none;
+    border-radius: 10px;
+    position: fixed;
+    top: 92vh;
+    right: 1rem;
+    font-size: 14px;
+    transition: 0.5s ease;
+  }
+  .container .mensajes {
+    width: 90%;
+  }
+
+  .modal-background .modal-container {
+    width: 85%;
+    font-size: 14px;
+  }
+  .modal-background .modal-container .modal-body {
+    padding: 6px;
+  }
+  .modal-background .modal-container .modal-body .input {
+    height: 40%;
+  }
+  .modal-background .modal-container .modal-footer {
+    height: 20%;
+    gap: 15px;
+  }
+  .modal-background .modal-container .modal-footer button {
+    height: 1.5rem;
+    width: 4rem;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

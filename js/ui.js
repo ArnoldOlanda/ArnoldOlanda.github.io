@@ -19,7 +19,7 @@ function crearTodo(todo) {
   const divTodo = document.createElement("DIV");
 
   divTodo.innerHTML = `
-    <div class="todo animate__animated animate__backInRight">
+    <div class="todo animate__animated animate__fadeInUp">
         <h2>${todo.titulo}</h2>
         <p>${todo.descripcion}</p>
         <div class="todo-actions-container">

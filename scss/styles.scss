@@ -62,10 +62,6 @@ $btn-background-hover: rgb(255, 255, 255);
         }
       }
     }
-    .animate-show-todo{
-        z-index: 50;
-        opacity: 1;
-    }
   }
   .btn-add-new-todo {
     width: 8rem;
@@ -191,4 +187,62 @@ $btn-background-hover: rgb(255, 255, 255);
   z-index: 100;
 }
 
+@media (max-width: 390px){
+  .container{
+    .todo-container{
+      width: 90%;
+      height: 78vh;
+      .todo{
+        font-size: 15px;
+        margin-bottom: 5px;
+        p{
+          font-size: 16px;
+        }
+        .todo-actions-container {
+          height: 30%;
+          button {
+            width: 1.5rem;
+            height: 1.5rem;
+          }
+        }
+      }
+    }
+    .btn-add-new-todo {
+      width: 7rem;
+      height: 2rem;
+      border: none;
+      border-radius: 10px;
+      position: fixed;
+      top: 92vh;
+      right: 1rem;
+      font-size: 14px;
+      transition: 0.5s ease;
+    }
+    .mensajes {
+      width: 90%;
+    }
+  }
+  .modal-background{
+    .modal-container{
+      width: 85%;
+      font-size: 14px;
+      .modal-body{
+        padding: 6px;
+        .input{
+          height: 40%;
+        }
+      }
+      .modal-footer {
+        height: 20%;
+        gap: 15px;
+  
+        button {
+          height: 1.5rem;
+          width: 4rem;
+    
+        }
+      }
+    }
+  }
+}
 // sass scss/styles.scss css/styles.css --watch
