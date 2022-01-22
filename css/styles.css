@@ -55,6 +55,33 @@
 .container .todo-container .todo .todo-actions-container button:hover {
   background-color: white;
 }
+.container .todo-container .loader-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .todo-container .loader-container .loader {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  animation: load 1s ease-in-out infinite;
+}
+.container .todo-container .hide {
+  display: none;
+}
+@keyframes load {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+  }
+}
 .container .btn-add-new-todo {
   width: 8rem;
   height: 2rem;

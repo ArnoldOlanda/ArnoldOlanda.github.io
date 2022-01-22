@@ -7,6 +7,7 @@ const inputTitulo = document.getElementById("inputTitulo");
 const inputDescripcion = document.getElementById("inputDescripcion");
 
 const todoContainer = document.querySelector(".todo-container");
+const loaderContainer = document.querySelector(".loader-container");
 
 
 btnNewTodo.addEventListener("click", ()=>{
@@ -63,9 +64,9 @@ btnSendData.addEventListener("click", async () => {
 onload = loadData(getPostDataPath);
 
 async function loadData(url) {
-  todoContainer.innerHTML = "";
   const response = await fetch(url);
   const data = await response.json();
+   loaderContainer.classList.add("hide");
   if (data.length > 0) {
     for (const element of data) {
       todoContainer.append( crearTodo(element) );
