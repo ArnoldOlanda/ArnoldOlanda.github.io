@@ -66,7 +66,8 @@ onload = loadData(getPostDataPath);
 async function loadData(url) {
   const response = await fetch(url);
   const data = await response.json();
-   loaderContainer.classList.add("hide");
+  loaderContainer.classList.add("hide");
+  todoContainer.innerHTML="";
   if (data.length > 0) {
     for (const element of data) {
       todoContainer.append( crearTodo(element) );
