@@ -58,6 +58,7 @@ btnRegister.onclick = async ()=> {
         almacen,
         cantidad:parseInt(stock.value)
     }
+    if(stock.value < 1) return alert("El stock no puede ser una cantidad negativa o cero")
 
     const response = await fetch('https://modulo-inventario.herokuapp.com/api/productos/',{
         method:'PUT',
