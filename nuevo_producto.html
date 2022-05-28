@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/dashboard.css">
+    <link rel="stylesheet" href="./css/registro.css">
+</head>
+
+<body>
+    <div class="nav">
+        <h1>Registro de nuevo producto</h1>
+        <button id="backButton" class="btn">Volver</button>
+    </div>
+    <div class="form-container">
+        <input type="text" class="input" id="nombre" placeholder="Nombre" autocomplete="off">
+        <textarea id="descripcion" class="input" placeholder="Descripcion(opcional)" style="resize: none;" cols="40" rows="5"></textarea>
+        <input type="text" class="input" id="unidad" placeholder="Unidad de medida" autocomplete="off">
+        <!-- proveedor -->
+        <select id="proveedor" class="input">
+            <option value="0" disabled selected>Seleccione un proveedor registrado</option>
+        </select>
+        <input type="number" class="input" id="stock" min="0" placeholder="Stock de unidades" autocomplete="off">
+        <input type="text" class="input" id="precio" placeholder="Precio" autocomplete="off">
+        <button type="button" class="input btn-register" id="registrar">Registrar</button>
+    </div>
+
+
+
+   
+
+    <script src="main.js"></script>
+    <script src="nuevo_producto.js"></script>
+</body>
+
+</html>

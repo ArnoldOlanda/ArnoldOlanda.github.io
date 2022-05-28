@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/dashboard.css">
+    <link rel="stylesheet" href="./css/registro.css">
+</head>
+<body>
+    <div class="nav">
+        <h2>Aumentar/ disminuir stock</h2>
+        <button id="backButton" class="btn">Volver</button>
+    </div>
+    <div class="form-container">
+        <select id="producto" class="input">
+            <option value="0" selected disabled>Seleccione un producto</option>
+        </select>
+        <input type="number" class="input" id="stock" placeholder="Cantidad" min="0">
+        <button type="button" class="input btn-register" id="btnRegister">Guardar</button>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="ingreso_salida_producto.js"></script>
+</body>
+</html>

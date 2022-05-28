@@ -1,0 +1,49 @@
+*{
+    box-sizing: border-box;
+}
+.table-container{
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 10px;
+    overflow: auto;
+}
+
+.table-container table{
+    width: 90%;
+}
+
+.table-container table th{
+    padding: 5px;
+    border-bottom: 1px gray solid;
+}
+
+.table-container table td{
+    padding: 5px;
+    border-bottom: 1px gray solid;
+}
+
+.form-container{
+    opacity: 0;
+    padding: 10px;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.input{
+    border: none;
+    border: 1px solid black;
+    width: 250px;
+    height: 35px;
+    padding: 0 10px;
+}
+
+.btn2{
+    width: 250px;
+    height: 35px;
+}

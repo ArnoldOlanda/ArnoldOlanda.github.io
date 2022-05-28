@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/listado.css">
+    <link rel="stylesheet" href="./css/dashboard.css">
+</head>
+<body>
+    <div class="nav">
+        <h1>Productos en almacen</h1>
+        <button class="btn" id="backButton">Volver</button>
+    </div>
+    <div class="table-container">
+        <table>
+            <thead>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Descripcion</th>
+                <th>Unidad Medida</th>
+                <th>Precio unit</th>
+                <th>Stock</th>
+                <th>Proveedor</th>
+                <th>Acciones</th>
+            </thead>
+            <tbody id="listaProductos"></tbody>
+        </table>
+    </div>
+    <hr>
+    <div id="updateForm" class="form-container">
+        <input type="text" id="nombre" class="input" placeholder="Nombre">
+        <input type="text" id="descripcion" class="input" placeholder="Descripcion">
+        <input type="text" id="unidad" class="input" placeholder="Unidad medida">
+        <input type="text" id="precio" class="input" placeholder="Precio">
+        <button id="update" class="btn2">Actualizar</button>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="lista_productos.js"></script>
+</body>
+</html>
