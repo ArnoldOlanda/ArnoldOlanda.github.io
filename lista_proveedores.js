@@ -30,7 +30,7 @@ const loadData = async () => {
     for (let i=0; i < data.data.length; i ++ ) {
         const tr = document.createElement('TR')
         tr.innerHTML=`
-            <td>${ data.data[i].id }</td>
+            <td>${ i + 1 }</td>
             <td>${ data.data[i].nombre }</td>
             <td>${ data.data[i].direccion }</td>
         `

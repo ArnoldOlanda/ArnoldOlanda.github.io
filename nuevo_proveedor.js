@@ -39,12 +39,12 @@ btnRegistrar.onclick = () => {
 
     try {
 
-        //saveData(body);
+        saveData(body);
 
         nombre.value=''
         direccion.value=''
         alert("Proveedor registrado")
-        //window.location.href = './dashboard.html'
+        window.location.href = './dashboard.html'
 
     } catch (error) {
         console.log(error);
